@@ -122,3 +122,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-06-11 10:04:38.786
 !MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-11 11:23:30.480
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-06-11 11:23:30.486
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
