@@ -12,6 +12,7 @@
 	<h4>Description: <c:out value="${book.description}"/></h4>
 	<h4>Language: <c:out value="${book.language}"/></h4>
 	<h4>Number of Pages: <c:out value="${book.numberOfPages}"/></h4>
+	<a href="/books/<c:out value="${book.id}"/>/edit"><button>Edit Book</button></a>
 	<a href='/books/<c:out value="${book.id}"/>/delete'><button>Delete</button></a>
 </body>
 </html>
