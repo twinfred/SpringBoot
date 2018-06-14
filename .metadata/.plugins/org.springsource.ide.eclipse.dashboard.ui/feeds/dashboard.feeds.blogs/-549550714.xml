@@ -5,7 +5,35 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-06-14T15:01:00Z</updated>
+  <updated>2018-06-14T20:14:07Z</updated>
+  <entry>
+    <title>Spring Boot 2.0.3 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/06/14/spring-boot-2-0-3-available-now" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Brian Clozel</name>
+    </author>
+    <id>tag:spring.io,2018-06-14:3308</id>
+    <updated>2018-06-14T20:14:07Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce that Spring Boot 2.0.3 has been released and is is now available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Spring Boot 2.0.3 includes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/112?closed=1"&gt;99 fixes, improvements and dependency updates&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 1.5.14 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/06/14/spring-boot-1-5-14-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2018-06-14:3305</id>
+    <updated>2018-06-14T18:44:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce that Spring Boot 1.5.14 has been released and is is now available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Spring Boot 1.5.14 includes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/111?closed=1"&gt;42 fixes, improvements and dependency updates&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/1.5.14.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Announcing Reactor Bismuth-SR10</title>
     <link rel="alternate" href="https://spring.io/blog/2018/06/14/announcing-reactor-bismuth-sr10" />
@@ -941,70 +969,5 @@ dependencies {&#xD;
     <content type="html">&lt;p&gt;speaker: Josh Long (&lt;a href="http://twitter.com/starbuxman"&gt;@starbuxman&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this installment we look at the Apache Camel enterprise integration framework, its numerous components, its Java DSL, support for observability, its integration with Spring Boot and the larger Spring ecosystem.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/-KupcZ3bA-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - May 22nd, 2018</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/05/23/this-week-in-spring-may-22nd-2018" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2018-05-22:3286</id>
-    <updated>2018-05-23T00:01:00Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Whew! What a wild week it&amp;rsquo;s been! I landed in Kiev, Ukraine, last Thursday to present at the &lt;em&gt;epic&lt;/em&gt; &lt;a href="https://jeeconf.com/"&gt;JEEConf in beautiful Kiev&lt;/a&gt;. Then, this weekend it was off to Dublin, Ireland and Belfast, North Ireland, where I had the privilege of speaking to some of the amazing Pivotal customers (like &lt;a href="https://twitter.com/Liberty_IT/status/998847225735327744"&gt;Liberty&lt;/a&gt;). I concluded today here in Belfast and tomorrow it&amp;rsquo;s off to bella Barcelona, Spain for the &lt;a href="https://2018.springio.net/"&gt;Spring I/O conference&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;As usual, it&amp;rsquo;s been a &lt;em&gt;crazy&lt;/em&gt; awesome week in the Spring community so without further ado let&amp;rsquo;s get to it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;We now have &lt;a href="https://github.com/spring-projects/spring-security/blob/9d55a64465c65d633f849d09aca44a9134e6e335/config/src/main/java/org/springframework/security/config/oauth2/client/oidc/OidcConfigurationProvider.java#L42"&gt;OIDC Provider Configuration support in Spring Security Master&lt;/a&gt;. Awesome!&lt;/li&gt;
-  &lt;li&gt;Be sure not to miss this webinar on what&amp;rsquo;s new in Spring Cloud Stream, June 7th, from &lt;a href="https://content.pivotal.io/webinars/jun-7-spring-cloud-stream-whats-new-in-2-x-and-whats-next-webinar?platform=hootsuite"&gt;Spring Cloud Stream lead Oleg Zhurakousky&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Over on &lt;a href="https://content.pivotal.io/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind"&gt;the Pivotal blog&lt;/a&gt; asks: &amp;ldquo;Should that be a microservice?&amp;rdquo; and gives six factors to keep in mind when making the call and cut.&lt;/li&gt;
-  &lt;li&gt;Do you really need any more reason to go to SpringOne Platform? Do &lt;em&gt;not&lt;/em&gt; miss &lt;a href="https://spring.io/blog/2018/05/22/enjoy-quality-time-with-the-spring-and-reactor-communities-at-springone-platform"&gt;this compelling invitation&lt;/a&gt; from Reactor project lead Stephane Maldini!&lt;/li&gt;
-  &lt;li&gt;Visualize and Monitor your &lt;a href="https://pivotal.io/platform/services-marketplace/monitoring-metrics-and-logging/weave-cloud"&gt;Pivotal Cloud Foundry Deployments with Weave Cloud for PCF&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data JDBC now has &lt;a href="https://github.com/spring-projects/spring-data-jdbc/commit/cd7403907a56d33853fae4c46bc135c90552aca2"&gt;support for &lt;code&gt;@Table&lt;/code&gt; and &lt;code&gt;@Column&lt;/code&gt;&lt;/a&gt; annotations thanks to @kazuki43zoo&lt;/li&gt;
-  &lt;li&gt;Spring Data lead Oliver Gierke announced that we&amp;rsquo;re extending Spring Data&amp;rsquo;s JavaSlang integration with support for &lt;code&gt;Try&lt;/code&gt; as query method return value, and encourages us to give the bits a, well, &lt;a href="https://jira.spring.io/browse/DATACMNS-983"&gt;..try&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data legend Christoph Strobl has just announced &lt;a href="https://spring.io/blog/2018/05/17/spring-data-lovelace-m3-released"&gt;Spring Data Lovelace M3&lt;/a&gt; which includes, among other things, revised documentation, annotation based auditing for the JDBC module, synchronous and reactive transaction support in preparation for the MongoDB 4.0 release, reactive map/reduce abstractions for MongoDB, enhancements to the Lucene index support in Spring Data Gemfire and for Apache Geode, reactive pub/sub for Spring Data Redis, Kotlin extensions for Spring Data Cassandra, driver upgrades for Gemfire 9.5, Apache Geode 1.6, Lettuce 5.1 (M1), MongoDB 3.8 (beta2), MongoDB Reactive Streams 1.9 (beta1) and Cassandra 3.5, and so much more!&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Data Flow lead Dr. Mark Pollack has just &lt;a href="https://spring.io/blog/2018/05/16/spring-cloud-data-flow-1-5-0-released"&gt;announced Spring Cloud Data Flow 1.5&lt;/a&gt;, which includes UI Improvements,&lt;br/&gt;Spring Boot 2.0, Spring Cloud Stream 2.0, and Spring Cloud Task 2.0 Support, updated application starters, metrics Improvements, nested splits for composed tasks, Kubernetes improvements, and updated File Ingest samples, and so much more!&lt;/li&gt;
-  &lt;li&gt;Hi Spring fans! In last week&amp;rsquo;s installments of Spring Tips, I looked at &lt;a href="http://projectRiff.io"&gt;Project Riff&lt;/a&gt; and Spring Cloud Function, &lt;a href="https://spring.io/blog/2018/05/16/spring-tips-project-riff-and-spring-cloud-function"&gt;a one-two punch for serverless function-as-a-service applications&lt;/a&gt;. Project Riff is a FaaS platform from Pivotal and Spring Cloud Function makes writing portable, Spring Boot-aware functions for a number of different platforms as easy as possible.&lt;/li&gt;
-  &lt;li&gt;What happens inside a Spring Data reactive driver, and how is data accessed in a reactive setting? Learn more from Spring Data ninja Mark Paluch&amp;rsquo;s talk &lt;a href="https://www.infoq.com/presentations/spring-data-reactive-driver"&gt;&amp;ldquo;Under the Hood of Reactive Data Access&amp;rdquo;&lt;/a&gt;, now on InfoQ.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://groups.google.com/forum/#!msg/rabbitmq-users/XkkHZCdDQMg/wHSv6IUxCAAJ"&gt;RabbitMQ 3.7.5 is out!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Daniel Mikusa has a nice post walking us through &lt;a href="https://www.cloudfoundry.org/blog/install-scale-wordpress-cloud-foundry-2018/"&gt;how to install Wordpress on Cloud Foundry&lt;/a&gt;. This isn&amp;rsquo;t to do with Spring, per se, but it does demonstrate how to &lt;a href="https://www.cloudfoundry.org/blog/install-scale-wordpress-cloud-foundry-2018/"&gt;get a fairly complicated application onto the platform&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The &amp;ldquo;Devskiller&amp;rdquo; blog has an awesome &lt;a href="https://devskiller.com/techblog/2018/05/17/Testing-REST-and-Messaging-With-Spring-Cloud-Contract-At-Devskiller/"&gt;post on testing REST and messaging-based microservices with Spring Cloud Contract&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Microsoft have just unveiled &lt;a href="https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md"&gt;the Application Insights starters for Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration and Spring for Apache Kafka &lt;a href="https://twitter.com/gprussell/status/997566108306681856"&gt;lead Gary Russell offers an official &amp;ldquo;pro-tip&amp;rdquo;!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The 2.0.0.GA release of Spring Boot Admin has just dropped! The new release has a &lt;em&gt;ton&lt;/em&gt; of nice features so do check out the release while you can! NB: the support for discovery of other services through the &lt;code&gt;DiscoveryClient&lt;/code&gt;, which hinges on the not-just-yet GA Spring Cloud Finchley release, has been kept out of this release and will release when the final version is available. Anyway, get the &lt;a href="https://github.com/codecentric/spring-boot-admin/releases/tag/2.0.0"&gt;bits while they&amp;rsquo;re hot!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This looks interesting! It&amp;rsquo;s a &lt;a href="https://github.com/GreaterMKEMeetup/spring-restdocs-postman"&gt;Spring RESTDocs snippet implementation that produces importable Postman collections&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;InfoQ have Pivotal and Spring legends&amp;rsquo; &lt;a href="https://www.infoq.com/presentations/tdd-spring-boot"&gt;Sannidhi Jalukar and Madhura Bhave&amp;rsquo;s talk on doing TDD&lt;/a&gt; for a Spring Boot application using Boot annotations and utilities and dealing with DB queries, caching, reactive programming. Awesome talk and well-worth a watch!&lt;/li&gt;
-  &lt;li&gt;Flowable is an open-source BPMN engine that integrates nicely with Spring Boot. Flowable project engineer Tijs Rademakers just announced that &amp;ldquo;&lt;a href="https://flowable.org/downloads.html"&gt;Flowable 6.3.1 has been released&lt;/a&gt; with enhanced historic information and pluggability options for the CMMN Engine, a new app engine to support the life cycle of apps within Flowable, improved Spring Boot 2.0.2 support and more&amp;rdquo;&lt;/li&gt;
-  &lt;li&gt;This is an interesting post on using &lt;a href="https://blog.switchbit.io/camel-spring-cloud-stream/"&gt;Apache Camel with Spring Cloud Stream&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I really enjoyed this post that begins to &lt;a href="https://springuni.com/gdpr-forget-me-app-with-spring-integration-part-1/"&gt;look at an application to support forget-me functionality&lt;/a&gt; in a Spring Integration-based application, in the context of the new GDPR regulations in the European Union.&lt;/li&gt;
-  &lt;li&gt;Bogdan D has &lt;a href="https://medium.com/@bogdandraghicescu/spring-boot-feature-toggles-fe66cfa7504d"&gt;a nice post on using Toggles&lt;/a&gt;, a feature-toggle library, with Spring Boot.&lt;/li&gt;
-  &lt;li&gt;This looks promising! It seems support for the &lt;a href="http://micrometer.io"&gt;Micrometer&lt;/a&gt; metrics facade &lt;a href="https://twitter.com/projectreactor/status/998383862852993024?s=12"&gt;has just landed in Project Reactor&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;Spring Boot ninja Stéphane Nicoll reveals an interesting new Actuator feature &lt;a href="https://twitter.com/snicoll/status/997080635360587776?s=12"&gt;in Spring Boot 2.1 supporting caches&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Pretty cool to see Spring Test lead and JUnit lead Sam Brannen&amp;rsquo;s poetry included in &lt;a href="https://www.youtube.com/watch?time_continue=1064&amp;v=HqxZFoY_snQ"&gt;Java Architect Mark Reinold&amp;rsquo;s talk on the state of Java in 2018&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This is a sample Spring Boot application &lt;a href="https://github.com/tiwarivikash/db-read-write"&gt;that uses different data sources for reads and writes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Codecentric&amp;rsquo;s &lt;a href="https://github.com/codecentric/chaos-monkey-spring-boot"&gt;Chaos Monkey for Spring Boot is a really interesting project&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Okta Developer Advocate Matt Raible just debuted updates to Spring Boot 2.0 for his videos &lt;a href="https://twitter.com/mraible/status/997153618821345281?s=12"&gt;looking at building microservices and securing microservices with Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&amp;ldquo;Mr. Devoxx,&amp;rdquo; Stephan Janssen, founder of Devoxx, has a great talk introducing his team&amp;rsquo;s journey &lt;a href="https://twitter.com/stephan007/status/997370353381969920?s=12"&gt;to revamp a Devoxx property using Spring Boot and JHipster&lt;/a&gt;. Check it out!&lt;/li&gt;
-  &lt;li&gt;Are you &lt;a href="https://springonetour.io/2018/london"&gt;registered for the SpringOne Tour London event&lt;/a&gt;? Do &lt;em&gt;not&lt;/em&gt; miss this!&lt;/li&gt;
-  &lt;li&gt;Spring Tool Suite lead Martin Lippert has just &lt;a href="https://twitter.com/springcentral/status/996805262538194944"&gt;announced the latest update of the Spring Tools Suite 4 public beta (milestone 11)&lt;/a&gt; including, among other things, performance and memory improvements, support for Java 10, and that Webflux handler method code lenses now work in Eclipse.&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Enjoy quality time with the Spring and Reactor communities at SpringOne Platform</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/05/22/enjoy-quality-time-with-the-spring-and-reactor-communities-at-springone-platform" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Stephane Maldini</name>
-    </author>
-    <id>tag:spring.io,2018-05-21:3284</id>
-    <updated>2018-05-22T00:05:57Z</updated>
-    <content type="html">&lt;p&gt;Hey there,&lt;/p&gt;
-&lt;p&gt;It feels like &lt;a href="https://springoneplatform.io/?utm_source=pivotal-email&amp;utm_medium=email-link&amp;utm_campaign=s1p-maldini-2018"&gt;SpringOne Platform&lt;/a&gt; was only yesterday, and I&amp;rsquo;m so excited by what&amp;rsquo;s coming in September! It’s yet another excuse to chat, exchange, share, have a drink, and enjoy quality time with the Spring and Reactor communities, contributors and users alike. &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll tell you a secret: as the project Reactor lead, this is one of my favorite places to capture amazing feedback and translate it into pull requests. I like spending hours replaying the software history with folks, talking about efficient distributed systems (or &amp;ldquo;microservices&amp;rdquo;) because&amp;ndash;Bingo! Reactive is all about these stories!&lt;/p&gt;
-&lt;p&gt;But I don&amp;rsquo;t think networking alone justifies attending a conference. We reserve our most impactful revelations for the audience, what we have been working on, what our next priorities will be, and when to use our libraries.&lt;/p&gt;
-&lt;p&gt;Nevertheless, Reactive programming is a major theme for Spring Boot 2 and Spring Framework 5, yet we are far from the only ones in the space. So what&amp;rsquo;s different about our Reactive story at Pivotal? My priority is to deliver sessions that help you answer this very question and offer a way for you to: &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Learn more about the Spring Reactive value proposition&lt;/strong&gt;. Do you need a refresher on what Reactive programming is? Do you want to be decisive about knowing when to use Reactive programming and Reactive systems?&lt;br/&gt;&lt;strong&gt;Position yourself as a subject matter expert&lt;/strong&gt;. We&amp;rsquo;ll be hosting architecture discussions, execution model analysis, and deep-dive explorations for typical Reactive scenarios, from &lt;strong&gt;IoT&lt;/strong&gt; to &lt;strong&gt;microservices orchestration&lt;/strong&gt; to &lt;strong&gt;mobile backends&lt;/strong&gt;.&lt;br/&gt;&lt;strong&gt;Be part of the open-source adventure&lt;/strong&gt;. Meet the team and help us define the next priorities, as well as discuss your needs, experience, pain, and wins. We want to have &lt;strong&gt;an inclusive Reactive story&lt;/strong&gt; where you are the hero.&lt;br/&gt;&lt;strong&gt;Know your options&lt;/strong&gt;. The Spring and Reactor teams are establishing a full vertical slice of features to support Reactive programming. There isn&amp;rsquo;t an enterprise integration issue we want to exclude from our radar, from data extraction to message passing. Get current with our reactive ecosystem.&lt;br/&gt;&lt;strong&gt;Take a front row seat for exclusive announcements&lt;/strong&gt;. The Reactive effort is multiplying at Pivotal, so take a front row seat for exclusive announcements! At the end of the day, we&amp;rsquo;re not here to surf the Reactive hype. We have some pretty interesting R&amp;amp;D collaboration going on and we want you to be the first to learn about it.&lt;/p&gt;
-&lt;p&gt;Considering attending? Yup, you definitely should! The content, the contributing teams, the open-source love—it&amp;rsquo;s all about the feedback loop we establish between you and us.&lt;/p&gt;
-&lt;p&gt;The Reactor team and I hope to see you there!&lt;/p&gt;
-&lt;p&gt;P.S. Feel free to use the code &lt;strong&gt;S1P200_SMaldini&lt;/strong&gt; to save an extra $200 when you &lt;a href="https://2018.event.springoneplatform.io/register?utm_source=pivotal-email&amp;utm_medium=email-link&amp;utm_campaign=s1p-maldini-2018"&gt;register&lt;/a&gt; for SpringOne Platform.&lt;/p&gt;</content>
   </entry>
 </feed>
