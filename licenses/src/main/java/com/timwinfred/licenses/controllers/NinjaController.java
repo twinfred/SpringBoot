@@ -35,7 +35,7 @@ public class NinjaController {
 		return "newninja.jsp";
 	}
 	
-	// add ninja page
+	// add ninja POST request
 	@RequestMapping(value="/new", method=RequestMethod.POST)
 	public String addNinja(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
 		System.out.println(ninja);
