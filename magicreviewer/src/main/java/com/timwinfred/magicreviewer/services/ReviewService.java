@@ -41,4 +41,15 @@ public class ReviewService {
 	public Review createReview(Review review) {
 		return reviewRepository.save(review);
 	}
+	
+	// get a card's average rating
+	public List<Integer> getAllRatingsForACard(Long id){
+		return reviewRepository.getAllRatingsForACard(id);
+	}
+	
+	// delete a review
+	public void deleteReview(Long id) {
+		reviewRepository.deleteById(id);
+		return;
+	}
 }

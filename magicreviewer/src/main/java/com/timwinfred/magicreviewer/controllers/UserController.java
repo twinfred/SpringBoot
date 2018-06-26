@@ -71,6 +71,13 @@ public class UserController {
     	if(result.hasErrors()) {
     		return "registration.jsp";
     	} else {
+    		user.setPoints(0);
+    		User firstUser = uService.getUserById((long) 1);
+    		if(firstUser == null) {
+    			user.setUser_level(9);
+    		}else {
+    			user.setUser_level(0);
+    		}
     		User newUser = uService.registerUser(user);
     		session.setAttribute("user_id", newUser.getId());
     		return "redirect:/";

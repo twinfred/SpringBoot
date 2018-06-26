@@ -5,7 +5,46 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-06-26T02:55:48Z</updated>
+  <updated>2018-06-26T14:57:54Z</updated>
+  <entry>
+    <title>This Week in Spring - June 26th, 2018</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/06/26/this-week-in-spring-june-26th-2018" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2018-06-26:3317</id>
+    <updated>2018-06-26T14:57:54Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans and welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This last week&amp;rsquo;s been fun! Since we last spoke, I have been in Amsterdam (customers), London (SpringOne Tour London); Paris, Fr (JHipster Conf); Krakow, Pl (Devoxx PL); and now Sao Paulo, Br (Spring Connect SP). It&amp;rsquo;s been a wild ride and it&amp;rsquo;s nice to conclude the journey here in Brazil with one of the largest Java communities on earth. &lt;/p&gt;
+&lt;p&gt;And, as a cherry on top, there is a &lt;em&gt;ton&lt;/em&gt; of great stuff to look at in this week&amp;rsquo;s roundup so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Geode / Gemfire lead John Blum has just announced the Spring Boot integration for &lt;a href="https://spring.io/blog/2018/06/26/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-m1-released"&gt;Apache Geode and Pivotal Gemfire 1.0.0.M1&lt;/a&gt;. It supports look-aside caching using Spring’s Cache Abstraction, system of record (SOR) using Spring Data Repositories and Spring transaction management, distributed compute using function implementation &amp;amp; executions, event stream processing (ESP) using continuous query, domain object versioning/serialization using PDX, Security, authentication / authorization, and TLS using SSL.&lt;/li&gt;
+  &lt;li&gt;Not one to rest on his laurels, Spring Data Geode/Gemfire lead John Blum &lt;a href="https://spring.io/blog/2018/06/21/spring-session-for-apache-geode-pivotal-gemfire-2-0-3-release-released"&gt;has announced Spring Session for Apache Geode/Pivotal Gemfire 2.0.3.RELEASE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this minimal &lt;a href="https://github.com/spring-projects/spring-fu/issues/29#issuecomment-398791917"&gt;Spring Fu webapp that now compiles to a native image successfully&lt;/a&gt; with Graal 1.0.0.RC2 and Kotlin 1.2.60 (will also work with 1.2.51), and Netty! Startup time is &amp;lt; 3 ms with Graal on my admittedly fairly quick Linux/Dell Precision 5520 (to be compared with 900 ms with Java 10). The self-sufficient &lt;a href="https://github.com/spring-projects/spring-fu/issues/29#issuecomment-398791917"&gt;executable size is 50 MB but there&amp;rsquo;s every reason to think we can reduce it.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hi Spring fans! We&amp;rsquo;ve officially concluded &lt;a href="https://spring.io/blog/2018/06/20/spring-tips-season-4-recap"&gt;our latest season of Spring Tips, season 4&lt;/a&gt;. If you want to learn more you should check out this recap post which lists every installment of &lt;em&gt;Spring Tips&lt;/em&gt; to date. As always I&amp;rsquo;m keen on any suggestions &lt;a href="http://twitter.com/Starbuxman"&gt;for the latest and greatest tips&lt;/a&gt;. And don&amp;rsquo;t worry, we&amp;rsquo;ll be back! :)&lt;/li&gt;
+  &lt;li&gt;Now that Spring Cloud Finchley GA is out, I thought I&amp;rsquo;d put together a recap of the road to reactive Spring Cloud. &lt;a href="https://spring.io/blog/2018/06/20/the-road-to-reactive-spring-cloud#disqus_thread"&gt;Check this out&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Good news everybody! &lt;a href="https://spring.io/guides/gs/crud-with-vaadin/"&gt;The Vaadin guide on Spring.io/guides&lt;/a&gt; has been updated to Vaadin 10 &lt;a href="https://twitter.com/gregturn/status/1011617414314889216?s=12"&gt;thanks to Vaadin&amp;rsquo;s very own Matti Tahvonen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is super cool! Project Blockhead is an open &lt;a href="https://www.cloudfoundry.org/blog/cloud-foundry-summit-hackathon-project-blockhead/"&gt;service broker compliant implementation that supports Ethereum&lt;/a&gt;, the result of a hackathon, too!&lt;/li&gt;
+  &lt;li&gt;Stephane Nicoll and Brian Clozel&amp;rsquo;s talk, &lt;em&gt;Spring Boot 2.0 Web Applications&lt;/em&gt;, is now available online. Here is the &lt;a href="https://www.youtube.com/watch?v=E3I7SlZ2QdU&amp;feature=youtu.be"&gt;video&lt;/a&gt; and here is the &lt;a href="https://github.com/snicoll-demos/smart-meter"&gt;code&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I did a talk, &lt;em&gt;Bootiful Kotlin&lt;/em&gt;, from Kotlin Conf 2017, that is &lt;a href="https://www.youtube.com/watch?v=SlBRce-aBOc&amp;feature=youtu.be"&gt;now available online&lt;/a&gt;. It&amp;rsquo;s a little outdated but it&amp;rsquo;s a roving tour of all sorts of integrations, classic and cutting edge, in the Spring and Kotlin universes.&lt;/li&gt;
+  &lt;li&gt;I really like this post from Pivotal&amp;rsquo;s own Richard Seroter on four Spring Cloud projects &lt;a href="https://seroter.wordpress.com/2018/06/25/four-spring-cloud-projects-that-you-should-be-using/"&gt;that you should definitely check out&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I love Spring Test lead and JUnit lead Sam Brannen&amp;rsquo;s explanation on the differences in &lt;a href="https://twitter.com/sam_brannen/status/1011306247499509761?s=12"&gt;autowiring in a regular Spring component versus its use in a JUnit test class&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;German consultancy and software house Codecentric, who&amp;rsquo;ve appeared in &lt;em&gt;This Week in Spring&lt;/em&gt; a number of times, &lt;a href="https://codecentric.rs/"&gt;have announced their hiterto German-languge only &lt;em&gt;Softwerker&lt;/em&gt; magazine is now available in English&lt;/a&gt;. They often have articles on Spring so I&amp;rsquo;d bookmark this. And if you read German, check out the back-issues!&lt;/li&gt;
+  &lt;li&gt;Check out &lt;a href="https://github.com/Microsoft/spring-data-gremlin"&gt;Spring Data Gremlin&lt;/a&gt;, Microsoft&amp;rsquo;s integration for any database that supports the Gremlin query language, of which CosmosDB is but one particularly interesting option&lt;/li&gt;
+  &lt;li&gt;This is an oldie-but-a-goodie from Michael Simons on how to &lt;a href="https://twitter.com/springcentral/status/1011320403023749121"&gt;configure a Spring Boot application to use JUnit 5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I like this post on using the &lt;a href="https://www.e4developer.com/2018/06/22/cia-world-factbook-api-with-functional-spring/"&gt;functional and reactive Spring support in Spring Framework 5 and Spring Boot 2&lt;/a&gt;, as a microframework of sorts, to turn the World Factbook API into a REST API&lt;/li&gt;
+  &lt;li&gt;Jenn Strater&amp;rsquo;s epic talk &lt;a href="https://www.infoq.com/presentations/documentation-api-spring-rest"&gt;on documenting RESTful APIs with Spring REST Docs on InfoQ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this video tutorial &lt;a href="https://www.youtube.com/playlist?list=PLu8oHHyQbBrTGvoGdF7NuZqKqU_31cKkc"&gt;series on using BOSH&lt;/a&gt; to manage infrastructure.&lt;/li&gt;
+  &lt;li&gt;I love this blog on optionally &lt;a href="http://blog.marcosbarbero.com/optional-di-spring/"&gt;injecting dependencies into your Spring code&lt;/a&gt;. Did you know you can inject dependencies that &lt;em&gt;may&lt;/em&gt; be present (or not) using Java 8&amp;rsquo;s &lt;code&gt;Optional&amp;lt;T&amp;gt;&lt;/code&gt;, JSR 330&amp;rsquo;s &lt;code&gt;Provider&amp;lt;T&amp;gt;&lt;/code&gt; and Spring&amp;rsquo;s longest supported &lt;code&gt;ObjectProvider&amp;lt;T&amp;gt;&lt;/code&gt;?&lt;/li&gt;
+  &lt;li&gt;This is a super cool tweet from Noopur Gupta demonstrating running tests on &lt;a href="https://twitter.com/noopur2507/status/1010123137793642496?s=12"&gt;specific platforms using new JUnit 5 annotations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I like this example &lt;a href="https://github.com/pacphi/reactive-jdbc-demo"&gt;demonstrating Spring Webflux and the &lt;code&gt;reactive-pg-client&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Codecentric&amp;rsquo;s Spring Boot Admin 2.0.1 released! The new release now &lt;a href="https://github.com/codecentric/spring-boot-admin/issues?utf8=%E2%9C%93&amp;q=milestone%3A2.0.1"&gt;includes Spring Cloud &lt;code&gt;DiscoveryClient&lt;/code&gt; support&lt;/a&gt;, now that Spring Cloud Finchley is GA. Hurray and congrats to the Codecentric team!&lt;/li&gt;
+  &lt;li&gt;The next iteration of Spring Boot, Spring Boot 2.1, &lt;a href="https://twitter.com/snicoll/status/1009163242172813312"&gt;is going to be awesome&lt;/a&gt;. It includes faster startup, immutable and scannable &lt;code&gt;@ConfigurationProperties&lt;/code&gt;, &lt;strong&gt;Netty support for HTTP/2&lt;/strong&gt;, functional bean registration support, and more!&lt;/li&gt;
+  &lt;li&gt;Check out Spencer Gibb&amp;rsquo;s Spring I/O 2018 talk, &lt;a href="https://youtu.be/NkgooKSeF8w"&gt;&lt;em&gt;Introducing Spring Cloud Gateway&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;JHipster v5.0.0 has been released, the day before Jhipster Conf, and it features support for Angular 6, React, Webpack 4, Spring Boot 2 &lt;a href="https://twitter.com/springcentral/status/1009599149904314368"&gt;and more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Is Cloud Foundry still relevant in the age of containers and serverless? Yes. In fact, it&amp;rsquo;s even more relevant. &lt;a href="https://www.youtube.com/watch?v=hU239WlrtBk"&gt;Check out this amazing writeup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.0.0.M1 Released!</title>
     <link rel="alternate" href="https://spring.io/blog/2018/06/26/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-m1-released" />
@@ -14,7 +53,7 @@
       <name>John Blum</name>
     </author>
     <id>tag:spring.io,2018-06-26:3316</id>
-    <updated>2018-06-26T02:55:48Z</updated>
+    <updated>2018-06-26T02:55:00Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
 &lt;p&gt;Greetings Spring &amp;amp; Apache Geode/Pivotal GemFire communities-&lt;/p&gt;
 &lt;/div&gt;
@@ -39,16 +78,16 @@
 &lt;p&gt;&lt;a href="https://content.pivotal.io/blog/an-introduction-to-look-aside-vs-inline-caching-patterns"&gt;&lt;em&gt;Look-Aside Caching&lt;/em&gt;&lt;/a&gt; using &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache"&gt;Spring&amp;#8217;s Cache Abstraction&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/System_of_record"&gt;System of Record (SOR)&lt;/a&gt; using &lt;a href="https://docs.spring.io/spring-data/commons/docs/current/reference/html/#repositories"&gt;SD Repositories&lt;/a&gt; and &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction"&gt;Spring Transaction Management&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/System_of_record"&gt;System of Record (SOR)&lt;/a&gt; using &lt;a href="https://docs.spring.io/spring-data/commons/docs/current/reference/html/#repositories"&gt;Spring Data Repositories&lt;/a&gt; and &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction"&gt;Spring Transaction Management&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Distributed Compute using &lt;a href="https://docs.spring.io/spring-data/geode/docs/current/reference/html/#function-annotations"&gt;Function Implementation &amp;amp; Executions&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Stream Event Processing (SEP) using &lt;a href="http://geode.apache.org/docs/guide/16/developing/continuous_querying/chapter_overview.html"&gt;Continuous Query&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Event Stream Processing (ESP) using &lt;a href="http://geode.apache.org/docs/guide/16/developing/continuous_querying/chapter_overview.html"&gt;Continuous Query&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Data Serialization using &lt;a href="http://geode.apache.org/docs/guide/16/developing/data_serialization/gemfire_pdx_serialization.html"&gt;PDX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Domain Object Versioning/Serialization using &lt;a href="http://geode.apache.org/docs/guide/16/developing/data_serialization/gemfire_pdx_serialization.html"&gt;PDX&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Security&lt;/p&gt;
@@ -78,6 +117,14 @@
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;For additional insight into the direction and progress of this  project, have a look at the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issues&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="documentation"&gt;&lt;a class="anchor" href="#documentation"&gt;&lt;/a&gt;Documentation&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Spring Boot for Apache Geode/Pivotal GemFire &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.BUILD-SNAPSHOT/reference/htmlsingle/"&gt;Reference Guide&lt;/a&gt; can be found by clicking the link.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1129,38 +1176,5 @@ dependencies {
     <content type="html">&lt;p&gt;speaker: &lt;a href="http://twitter.com/Starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this installment of &lt;em&gt;Spring Tips&lt;/em&gt; we look at the brand new microframework from the Spring team, &lt;a href="https://github.com/spring-projects/spring-fu"&gt;Spring Fu&lt;/a&gt;, which makes short work of building fast, reactive Kotlin-based microservices.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/-yJ53wzG_lg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - June 12th, 2018</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/06/13/this-week-in-spring-june-12th-2018" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2018-06-13:3300</id>
-    <updated>2018-06-13T04:26:14Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans and welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in NYC for the &lt;a href="https://springonetour.io/2018/nyc"&gt;SpringOne Tour NYC event&lt;/a&gt;, then it&amp;rsquo;s off to Amsterdam for some customer visits. It&amp;rsquo;s been a wild week in Spring so let&amp;rsquo;s get to it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hi Spring fans! In this installment of &lt;em&gt;Spring Tips&lt;/em&gt; we &lt;a href="https://spring.io/blog/2018/06/06/spring-tips-jpa"&gt;look at the Java Persistence API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss this webinar on &lt;a href="https://content.pivotal.io/webinars/jun-20-next-generation-spring-data-and-mongodb-webinar"&gt;MongoDB by Spring Data&amp;rsquo;s Christoph Strobl and Mat Keep&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-fu"&gt;Spring Fu&lt;/a&gt; is here and it&amp;rsquo;s &lt;em&gt;awesome&lt;/em&gt;! Just check out this example application of the new Kotlin-first &lt;a href="https://github.com/spring-projects/spring-fu/blob/master/samples/reactive-webapp/src/main/kotlin/org/springframework/fu/sample/reactive/Application.kt"&gt;microframework&lt;/a&gt; for Spring developers. Spring Fu is explicit, not implicit. It&amp;rsquo;s functional, it&amp;rsquo;s fast, it&amp;rsquo;s Spring Fu.&lt;/li&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss the upcoming &lt;a href="https://connect.pivotal.io/pivotal-paris-2018.html"&gt;Pivotal Paris event with many of the Spring team&amp;rsquo;s local engineers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Dr. Mark Pollack has just announced Spring &lt;a href="https://spring.io/blog/2018/06/06/spring-cloud-data-flow-1-5-1-released"&gt;Cloud Data Flow 1.5.1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Dr. Mark Pollack, not one to rest on his laurels, &lt;a href="https://spring.io/blog/2018/06/06/spring-cloud-skipper-1-0-5-released"&gt;just announced Spring Cloud Skipper 1.0.5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out this Spring I/O 2018 talk &lt;a href="https://www.youtube.com/watch?v=0cvnY7kM0Mk&amp;feature=youtu.be"&gt;Securing Spring Applications with Spring Cloud Vault&lt;/a&gt; Jan Dittberner&lt;/li&gt;
-  &lt;li&gt;Check out this tutorial on how to use &lt;a href="https://101.jqassistant.org/getting-started-spring-boot-maven/readme.html"&gt;jQAssistant and Spring Boot and Maven&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;More than half (61 percent) of all CloudFoundry users are large enterprises which generate over $1 billion in annual revenue. See how CCloudFoundry scales in the enterprise. &lt;a href="https://www.cloudfoundry.org/cf-user-report-2018/"&gt;Download the full report!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I had a great time talking all things Cloud Native, Singapore/Malaysian/Indonesian food in this podcast recorded at Voxxed Singapore with the cloud&amp;rsquo;s very own storyteller, &lt;a href="https://soundcloud.com/pivotalconversations/cloud-native-malay-food-tracing-in-java-and-databases"&gt;Michael Coté&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Pivotal advocate Mark Heckler has a nice post on &lt;a href="https://t.co/CMSdSMO5k1?ssr=true"&gt;running multiple Eureka instances on the same machine&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data engineer Mark Paluch shared a tantalizing picture &lt;a href="https://twitter.com/mp911de/status/1005511561233027072?s=12"&gt;of initial integration for the Lettuce Redis driver and Zipkin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Alexandru Ionita did a nice job &lt;a href="https://medium.com/@nucatus/spring-boot-2-x-migration-analysis-95f42bde402a"&gt;chronicling the migration from Spring Boot 1.x to 2.x.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/jmckenty/status/1004775628388724736?s=12"&gt;twitter.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out the video to Johannes Edmeier&amp;rsquo;s Spring I/O 2018 talk, &lt;a href="https://www.youtube.com/watch?v=__zkypwjSMs&amp;feature=youtu.be"&gt;&amp;ldquo;Monitoring Spring Boot Applications with Spring Boot Admin.&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out Arjen Poutsma&amp;rsquo;s SpringOne Platform 2017 talk &lt;a href="https://twitter.com/springcentral/status/1004855627863093249"&gt;on the functional reactive web endpoints in Spring Framework 5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out this epic Domain Driven Design example by Jakub Pilimon which &lt;a href="https://github.com/ddd-by-examples/factory/pull/12"&gt;now has new Spring Cloud Pipelines support&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;the Chaos Monkey for &lt;a href="https://twitter.com/springcentral/status/1004761691953889283"&gt;Spring Boot now works with Russ Miles&amp;rsquo; Chaos Toolkit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/chaos-toolkit/chaos-toolkit-loves-chaos-monkey-for-spring-boot-548352985c8f"&gt;Chaos Toolkit LOVES Chaos Monkey for Spring Boot – Chaos Toolkit – Medium&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Microsoft Azure have even better support for &lt;a href="https://docs.microsoft.com/en-us/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin"&gt;deploying Spring Boot applications&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

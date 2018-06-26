@@ -21,13 +21,24 @@
 					function(){
 						var searchResults = '';
 						for(var i = 0; i < searchData.data.length; i++) {
-							
+							var cardUrlName = searchData.data[i].name;
+							console.log(cardUrlName);
+							while(cardUrlName.indexOf("'") > -1){
+								var apsIdx = cardUrlName.indexOf("'");
+								console.log(apsIdx);
+								var newName = cardUrlName.slice(0, apsIdx) + "%27" + cardUrlName.slice(apsIdx+1);
+								cardUrlName = newName;
+								console.log(cardUrlName);
+							}
+							searchResults += "<a href='/card?name=" + cardUrlName + "'>"
 							if(searchData.data[i].image_uris){
 								searchResults += "<img style='width: 200px' src='"+searchData.data[i].image_uris.art_crop+"'>";
+							}else if(searchData.data[i].card_faces){
+								searchResults += "<img style='width: 200px' src='"+searchData.data[i].card_faces[0].image_uris.art_crop+"'>";
 							}else{
 								searchResults += "<img style='width: 200px' src='https://www.gumtree.com/static/1/resources/assets/rwd/images/orphans/a37b37d99e7cef805f354d47.noimage_thumbnail.png'>";
 							}
-							searchResults += "<h3><a href='/card?name=" + searchData.data[i].name + "'>" + searchData.data[i].name + "</h3></a>";
+							searchResults += "</a><h3><a href='/card?name=" + cardUrlName + "'>" + searchData.data[i].name + "</h3></a>";
 							if(searchData.data[i].flavor_text){
 								var flavorText = searchData.data[i].flavor_text;
 								if(searchData.data[i].flavor_text.length > 100) {

@@ -14,7 +14,7 @@
 			var searchResults = [];
 			
 			function makeApiRequest(thisQuery){
-				var searchData;
+				searchData = {};
 				$.get("https://api.scryfall.com/cards/search?order=released&q="+thisQuery, function(data) {
 					searchData = data;
 					console.log("Results:", data);
@@ -43,8 +43,9 @@
 </head>
 <body>
 	<c:choose>
-		<c:when test = "user != null">
+		<c:when test = "${user != null}">
 			<p>Hey there, <c:out value="${user.username}"/></p>
+			<a href="/logout">Logout</a>
 		</c:when>
 		<c:otherwise>
 			<p><c:out value="${error}" /></p>
