@@ -10,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.timwinfred.licenses.models.License;
 import com.timwinfred.licenses.models.Person;
@@ -37,7 +36,7 @@ public class LicenseController {
 	
 	// add license POST request
 	@RequestMapping(value="/licenses/new", method=RequestMethod.POST)
-	public String addLicense(@Valid @ModelAttribute("license") License license, BindingResult result, @RequestParam("expiration_date") String expiration_date) {
+	public String addLicense(@Valid @ModelAttribute("license") License license, BindingResult result) {
 		if(result.hasErrors()) {
 			return "newlicense.jsp";
 		} else {
