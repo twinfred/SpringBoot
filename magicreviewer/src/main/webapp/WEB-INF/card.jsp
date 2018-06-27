@@ -128,7 +128,7 @@
 			// show card star ratings
 			var avgRating = $("#avgRating").attr("avgRating");
 			console.log("avgRating", avgRating);
-			if(avgRating){
+			if(avgRating != null){
 				if(avgRating < 1.25){
 					$("#starRating").html("<img id='starImg' src='/img/5_Star_Rating_System_1_star.png'>");
 				}else if(avgRating < 1.75){
@@ -159,6 +159,17 @@
 					makeApiRequest(searchField, true);	
 				}
 			})
+			
+			// review box character count
+			$("#review").keyup(function(){
+				var charCount = $("#review").val().length;
+				console.log(charCount);
+				if(charCount < 20){
+					$("#charCount").text("Review too short: " + Math.abs(charCount-20) + " characters remaining.");
+				}else{
+					$("#charCount").text("");
+				}
+			})
 		})
 	</script>
 	<title><c:out value="${cardName}"/></title>
@@ -170,10 +181,11 @@
 	</form>
 	<div id="cardResults"></div>
 	<h2>Add A Review:</h2>
+	<p>A review title is required and your review should be at least 20 characters long.</p>
 	<c:choose>
 		<c:when test="${user != null}">
-			<p><form:errors path="review.*"/></p>
-			<form:form method="POST" action="/review?cardName=${cardName}" modelAttribute="thisReview">
+			<form:form method="POST" action="/card?name=${cardName}" modelAttribute="thisReview">
+				<c:if test="${error != null}"><p class="error"><c:out value="${error}"/></p></c:if>
 		    	<table>
 		    		<tr>
 		    			<td>
@@ -193,6 +205,9 @@
 		    		<tr>
 		    			<td><form:textarea path="review" placeholder="Write your review..."/></td>
 		    		</tr>
+		    		<tr>
+		    			<td id="charCount"></td>
+		    		</tr>
 		    	</table>
 		        <input type="submit" value="Add Review"/>
 		    </form:form>
@@ -202,7 +217,7 @@
 		</c:otherwise>
 	</c:choose>
 	<c:choose>
-		<c:when test="${reviews != null}">
+		<c:when test="${reviews.size() != 0 && reviews != null}">
 			<h2 id="avgRating" avgRating="${avgRating}">Card Rating:</h2>
 			<div id="starRating"></div>
 			<c:if test="${ratingCount > 0}">
@@ -238,10 +253,13 @@
 				<p><c:if test="${review[6] == user.id || user.user_level == 9}"><a href="/review/delete/<c:out value="${review[0]}"/>"><button>Delete Review</button></a></c:if><c:if test="${review[6] == user.id}"> <a href="/review/edit/<c:out value="${review[0]}"/>"><button>Edit Review</button></a></</c:if></p>
 				<hr>
 			</c:forEach>
+			<c:if test="${reviews.size() == 0}">
+			
+			</c:if>
 		</c:when>
 		<c:otherwise>
 			<h2>Recent Reviews:</h2>
-			<p>This card doesn't have any reviews yet. <span style="font-weight: bold">Be the first to review <c:out value="${cardName }"></c:out> and get 10 points!</span></p>
+			<p>This card doesn't have any reviews yet. <span style="font-weight: bold">Be the first to review <c:out value="${cardName }"></c:out> and add 10 points to your score!</span></p>
 		</c:otherwise>
 	</c:choose>
 </body>

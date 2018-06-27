@@ -74,13 +74,16 @@ public class UserService {
     
     // get to 50 users by points (leaderboard)
     public List<User> getTop50UsersByPoints() {
-    	return userRepository.findFirst50ByOrderByPoints();
+    	return userRepository.findFirst50ByOrderByPointsDesc();
     }
     
     // get to 10 users by points (leaderboard)
     public List<User> getTop10UsersByPoints() {
-    	return userRepository.findFirst10ByOrderByPoints();
+    	return userRepository.findFirst10ByOrderByPointsDesc();
     }
     
-    // add 5 points to user
+    // save user edit
+    public void saveUser(User user) {
+    	userRepository.save(user);
+    }
 }

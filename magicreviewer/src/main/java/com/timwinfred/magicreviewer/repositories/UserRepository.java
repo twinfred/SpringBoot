@@ -8,6 +8,6 @@ import com.timwinfred.magicreviewer.models.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 	User findByEmail(String email);
-	List<User> findFirst10ByOrderByPoints();
-	List<User> findFirst50ByOrderByPoints();
+	List<User> findFirst10ByOrderByPointsDesc();
+	List<User> findFirst50ByOrderByPointsDesc();
 }

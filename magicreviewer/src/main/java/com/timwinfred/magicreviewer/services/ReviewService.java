@@ -52,4 +52,19 @@ public class ReviewService {
 		reviewRepository.deleteById(id);
 		return;
 	}
+	
+	// does card have a review yet?
+	public boolean doesCardHaveReview(Long id) {
+		int reviewCount = reviewRepository.getAllReviewsForACard(id).size();
+		if(reviewCount == 0) {
+			return false;
+		}else {
+			return true;
+		}
+	}
+	
+	// save review edit
+	public void saveReview(Review review) {
+		reviewRepository.save(review);
+	}
 }

@@ -45,6 +45,7 @@
 	<c:choose>
 		<c:when test = "${user != null}">
 			<p>Hey there, <c:out value="${user.username}"/></p>
+			<p>Your Score: <c:out value="${user.points}"/></p>
 			<a href="/logout">Logout</a>
 		</c:when>
 		<c:otherwise>

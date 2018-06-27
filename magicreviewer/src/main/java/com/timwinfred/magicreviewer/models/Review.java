@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -22,7 +23,7 @@ public class Review {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private int rating;
-	@Size(min = 5, message="Review title must be at least 5 characters long.")
+	@NotNull
 	private String title;
 	@Size(min = 20, message="Reviews must be at least 20 characters long.")
 	private String review;

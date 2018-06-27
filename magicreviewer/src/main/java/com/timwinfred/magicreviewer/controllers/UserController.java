@@ -41,15 +41,16 @@ public class UserController {
     }
     
     @RequestMapping("/leaderboard")
-    public String leaderboard(@RequestParam(value="top") String resultCount, Model model, HttpSession session) {
-    	if(session.getAttribute("user_id") != null) {
-			User user = uService.getUserById((Long) session.getAttribute("user_id"));
-			model.addAttribute("user", user);
-		}
-    	if(resultCount == null || resultCount != "50") {
+    public String leaderboard(@RequestParam(value="top", required=false) String resultCount, Model model, HttpSession session) {
+    	if(resultCount == null) {
+    		resultCount = "10";
+    	}
+    	if(resultCount.equals("10")) {
+    		model.addAttribute("number", resultCount);
     		List<User> topUsers = uService.getTop10UsersByPoints();
     		model.addAttribute("topUsers", topUsers);
     	}else {
+    		model.addAttribute("number", "50");
     		List<User> topUsers = uService.getTop50UsersByPoints();
     		model.addAttribute("topUsers", topUsers);
     	}
