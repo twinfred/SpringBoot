@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.timwinfred.magicreviewer.models.Review;
 import com.timwinfred.magicreviewer.models.User;
 import com.timwinfred.magicreviewer.services.ReviewService;
 import com.timwinfred.magicreviewer.services.UserService;
@@ -34,10 +35,12 @@ public class UserController {
     	} else {
     		User user = uService.getUserById((Long) session.getAttribute("user_id"));
     		model.addAttribute("user", user);
-    		List<Object[]> reviews = rService.getAllReviewsByAUser(user.getId());
-    		model.addAttribute("reviews", reviews);
+    		List<Object[]> myReviews = rService.getAllReviewsByAUser(user.getId());
+    		model.addAttribute("myReviews", myReviews);
+    		List<Review> recentReviews = rService.getRecent3Reviews();
+    		model.addAttribute("recentReviews", recentReviews);
     		return "account.jsp";
-    	} 
+    	}
     }
     
     @RequestMapping("/leaderboard")
@@ -45,6 +48,10 @@ public class UserController {
     	if(resultCount == null) {
     		resultCount = "10";
     	}
+    	if(session.getAttribute("user_id") != null) {
+			User user = uService.getUserById((Long) session.getAttribute("user_id"));
+			model.addAttribute("user", user);
+		}
     	if(resultCount.equals("10")) {
     		model.addAttribute("number", resultCount);
     		List<User> topUsers = uService.getTop10UsersByPoints();
@@ -54,13 +61,23 @@ public class UserController {
     		List<User> topUsers = uService.getTop50UsersByPoints();
     		model.addAttribute("topUsers", topUsers);
     	}
+    	List<Review> recentReviews = rService.getRecent3Reviews();
+		model.addAttribute("recentReviews", recentReviews);
     	return "leaderboard.jsp";
     }
     
+    @RequestMapping("/login")
+    public String login(Model model) {
+    	List<Review> recentReviews = rService.getRecent3Reviews();
+		model.addAttribute("recentReviews", recentReviews);
+    	return "login.jsp";
+    }
     
     @RequestMapping("/registration")
-    public String registration(@ModelAttribute("user") User user, HttpSession session) {
+    public String registration(@ModelAttribute("user") User user, HttpSession session, Model model) {
     	if(session.getAttribute("user_id") == null) {
+    		List<Review> recentReviews = rService.getRecent3Reviews();
+    		model.addAttribute("recentReviews", recentReviews);
     		return "registration.jsp";
     	} else {
     		return "redirect:/account";
@@ -68,8 +85,10 @@ public class UserController {
     }
     
     @PostMapping("/registration")
-	public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
+	public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session, Model model) {
     	if(result.hasErrors()) {
+    		List<Review> recentReviews = rService.getRecent3Reviews();
+    		model.addAttribute("recentReviews", recentReviews);
     		return "registration.jsp";
     	} else {
     		user.setPoints(0);
@@ -95,7 +114,9 @@ public class UserController {
     	} else {
     		user.setEmail("");
     		model.addAttribute("error", "The email or password you entered was incorrect.");
-    		return "registration.jsp";
+    		List<Review> recentReviews = rService.getRecent3Reviews();
+    		model.addAttribute("recentReviews", recentReviews);
+    		return "login.jsp";
     	}
     }
     

@@ -67,4 +67,9 @@ public class ReviewService {
 	public void saveReview(Review review) {
 		reviewRepository.save(review);
 	}
+	
+	// get 4 most recent reviews
+	public List<Review> getRecent3Reviews(){
+		return reviewRepository.findFirst3ByOrderByCreatedAtDesc();
+	}
 }

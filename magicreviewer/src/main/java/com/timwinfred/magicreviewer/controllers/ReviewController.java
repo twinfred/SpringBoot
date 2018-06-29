@@ -35,6 +35,10 @@ public class ReviewController {
 	
 	@RequestMapping("/card")
 	public String card(@RequestParam(value="name") String cardName, Model model, HttpSession session, @ModelAttribute("thisReview") Review review) {
+		System.out.println("Card Name: " + cardName);
+		if(cardName.equals("")) {
+			return "redirect:/";
+		}
 		if(session.getAttribute("user_id") != null) {
 			User user = uService.getUserById((Long) session.getAttribute("user_id"));
 			model.addAttribute("user", user);
@@ -55,6 +59,8 @@ public class ReviewController {
 			model.addAttribute("ratingCount", ratingCount);
 			model.addAttribute("avgRating", avgRating);
 		}
+		List<Review> recentReviews = rService.getRecent3Reviews();
+		model.addAttribute("recentReviews", recentReviews);
 		return "card.jsp";
 	}
 	
@@ -70,7 +76,18 @@ public class ReviewController {
 				model.addAttribute("card", card);
 				List<Object[]> reviews = rService.getAllReviewsForACard(card.getId());
 				model.addAttribute("reviews", reviews);
+				List<Integer> ratings = rService.getAllRatingsForACard(card.getId());
+				Integer ratingCount = ratings.size();
+				Integer ratingTotal = 0;
+				for(Integer rating: ratings) {
+					ratingTotal += rating;
+				}
+				Double avgRating = (double) ratingTotal / (double) ratingCount;
+				model.addAttribute("ratingCount", ratingCount);
+				model.addAttribute("avgRating", avgRating);
 			}
+			List<Review> recentReviews = rService.getRecent3Reviews();
+			model.addAttribute("recentReviews", recentReviews);
 			return "card.jsp";
 		} else {
 			thisReview.setUser(user);
@@ -136,12 +153,24 @@ public class ReviewController {
 	
 	// review edit page
 	@RequestMapping("/review/edit/{id}")
-	public String editReview(@PathVariable(value="id", required=true) Long id, @ModelAttribute("thisReview") Review thisReview, Model model) {
-		thisReview = rService.getReviewById(id);
-		String cardName = thisReview.getCard().getName();
-		model.addAttribute("cardName", cardName);
-		model.addAttribute("thisReview", thisReview);
-		return "reviewEdit.jsp";
+	public String editReview(@PathVariable(value="id", required=true) Long id, @ModelAttribute("thisReview") Review thisReview, Model model, HttpSession session) {
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:/";
+		}else {
+			thisReview = rService.getReviewById(id);
+			User thisUser = uService.getUserById((Long) session.getAttribute("user_id"));
+			if(thisReview.getUser().getUsername().equals(thisUser.getUsername()) || thisUser.getUser_level() == 9) {	
+				String cardName = thisReview.getCard().getName();
+				model.addAttribute("cardName", cardName);
+				model.addAttribute("thisReview", thisReview);
+				model.addAttribute("user", thisUser);
+				List<Review> recentReviews = rService.getRecent3Reviews();
+				model.addAttribute("recentReviews", recentReviews);
+				return "reviewEdit.jsp";
+			}else {
+				return "redirect:/";
+			}
+		}
 	}
 	
 	// edit review put request
