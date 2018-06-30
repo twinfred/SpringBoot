@@ -9,6 +9,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121649556-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-121649556-1');
+	</script>
 	<script>
 		$(document).ready(function(){
 			// get info on the cards user has reviewed
@@ -115,8 +124,10 @@
 		    	<c:choose>
 			  	<c:when test = "${user != null}">
 			  		<ul class="nav navbar-nav navbar-right">
+			  			<c:if test="${user.user_level == 9}">
+			  				<li><a href="/admin">Admin</a></li>
+			  			</c:if>	
 						<li class="active"><a href="/account">My Account</a></li>
-						<li><a href="/logout" style='float:right'>Logout</a></li>
 					</ul>
 				</c:when>
 				<c:otherwise>
@@ -139,6 +150,7 @@
 				</form>
 				<hr>
 				<h1>Hey there, <c:out value="${user.username}"/>!</h1>
+				<a href="/logout" style='float:right'>Logout</a>
 				<h4>Your Score: <c:out value="${user.points}"/></h4>
 				<hr>
 				<h3 id="myReviewsCount" myReviewsCount="<c:out value="${myReviews.size()}"/>">Your reviews:</h3>
@@ -166,8 +178,8 @@
 									<img class="starsGiven starsGivenAccount" src="/img/5_Star_Rating_System_5_stars.png">
 								</c:if>
 								<p><c:out value="${review[4]}"/></p>
-								<a href="/review/edit/<c:out value="${review[0]}"/>">Edit</a>
-								<a href="/review/delete/<c:out value="${review[0]}"/>">Delete</a>
+								<a href="/review/delete/<c:out value="${review[0]}"/>"><button class="btn btn-danger btn-xs">Delete</button></a>
+								<a href="/review/edit/<c:out value="${review[0]}"/>"><button class="btn btn-primary btn-xs">Edit</button></a>
 							</div>
 						</div>
 					</c:forEach>
@@ -207,7 +219,14 @@
 	</div>
 	
 	<footer class="container-fluid text-center">
-		<p>Site created by <a href="http://timwinfred.com" target="_blank">Tim Winfred</a></p>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<p>The literal and graphical information presented on this site about Magic: The Gathering, including card images, the mana symbols, and Oracle text, is copyright Wizards of the Coast, LLC, a subsidiary of Hasbro, Inc. This website is not produced by, endorsed by, supported by, or affiliated with Wizards of the Coast.</p>
+				<p>All other content © 2018 <a href="http://timwinfred.com" target="_blank">TimWinfred.com</a></p>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
 	</footer>
 </body>
 </html>

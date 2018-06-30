@@ -11,6 +11,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121649556-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-121649556-1');
+	</script>
 	<script>
 		$(document).ready(function() {
 			
@@ -279,6 +288,13 @@
 						<h2>Add A Review:</h2>
 						<c:choose>
 							<c:when test="${user != null}">
+								<c:set var = "alreadyReviewed" scope = "session" value="false"/>
+								<c:forEach items="${reviews}" var="review">
+									<c:if test="${review[6] == user.id}">
+										<c:set var = "alreadyReviewed" scope = "session" value="true"/>
+									</c:if>
+								</c:forEach>
+								<c:if test="${alreadyReviewed == false}">
 								<p>Your review must be at least 20 characters long.</p>
 								<form:form method="POST" action="/card?name=${cardName}" modelAttribute="thisReview">
 									<c:if test="${error != null}"><p class="error"><c:out value="${error}"/></p></c:if>
@@ -301,6 +317,10 @@
 							    		</div>
 							        <input class="btn btn-primary" type="submit" value="Add Review"/>
 							    </form:form>
+							    </c:if>
+							    <c:if test="${alreadyReviewed == true}">
+							    	<p>You have already reviewed this card and cannot review it again.</p>
+							    </c:if>
 							</c:when>
 							<c:otherwise>
 								<p>If you would like to write a review of this card, you need to <a href="/login">login</a> or <a href="/registration">register</a>.</p>
@@ -380,7 +400,14 @@
 	</div>
 	
 	<footer class="container-fluid text-center">
-		<p>Site created by <a href="http://timwinfred.com" target="_blank">Tim Winfred</a></p>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<p>The literal and graphical information presented on this site about Magic: The Gathering, including card images, the mana symbols, and Oracle text, is copyright Wizards of the Coast, LLC, a subsidiary of Hasbro, Inc. This website is not produced by, endorsed by, supported by, or affiliated with Wizards of the Coast.</p>
+				<p>All other content © 2018 <a href="http://timwinfred.com" target="_blank">TimWinfred.com</a></p>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
 	</footer>
 
 </body>

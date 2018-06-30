@@ -1,5 +1,6 @@
 package com.timwinfred.magicreviewer.controllers;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -124,5 +125,25 @@ public class UserController {
     public String logout(HttpSession session) {
     	session.invalidate();
     	return "redirect:/";
+    }
+    
+    @RequestMapping("/admin")
+    public String admin(HttpSession session, Model model) {
+    	if(session.getAttribute("user_id") == null) {
+    		return "redirect:/";
+    	}else {
+    		User user = uService.getUserById((Long) session.getAttribute("user_id"));
+    		if(user.getUser_level() != 9) {
+    			return "redirect:/";
+    		}else {
+    			Iterable<User> allUsers = uService.getAllUsers();
+    			Iterable<Review> allReviews = rService.getAllReviews();
+    			Collections.reverse((List<?>) allReviews);
+    			Collections.reverse((List<?>) allUsers);
+    			model.addAttribute("allUsers", allUsers);
+    			model.addAttribute("allReviews", allReviews);
+    			return "admin.jsp";
+    		}
+    	}
     }
 }
