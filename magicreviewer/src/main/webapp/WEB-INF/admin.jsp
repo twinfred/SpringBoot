@@ -92,8 +92,8 @@
 								<td><c:out value="${user.username}"/></td>
 								<td><c:out value="${user.email}"/></td>
 								<td>
-									<c:if test="${user.id != 1}">
-										<a href="/review/delete/<c:out value="${user.id}"/>"><button class="btn btn-danger btn-xs">Delete</button></a>	
+									<c:if test="${user.user_level != 9}">
+										<a href="/user/delete/<c:out value="${user.id}"/>"><button class="btn btn-danger btn-xs">Delete</button></a>	
 									</c:if>
 								</td>
 							</tr>

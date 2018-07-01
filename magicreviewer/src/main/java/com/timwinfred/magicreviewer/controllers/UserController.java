@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -143,6 +144,21 @@ public class UserController {
     			model.addAttribute("allUsers", allUsers);
     			model.addAttribute("allReviews", allReviews);
     			return "admin.jsp";
+    		}
+    	}
+    }
+    
+    @RequestMapping("/user/delete/{id}")
+    public String deleteUser(HttpSession session, @PathVariable(value="id", required=true) Long id) {
+    	if(session.getAttribute("user_id") == null) {
+    		return "redirect:/";
+    	}else {
+    		User user = uService.getUserById((Long) session.getAttribute("user_id"));
+    		if(user.getUser_level() != 9) {
+    			return "redirect:/";
+    		}else {
+    			uService.deleteUser(id);
+    			return "redirect:/admin";
     		}
     	}
     }
